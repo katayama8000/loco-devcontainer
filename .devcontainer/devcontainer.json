@@ -1,0 +1,10 @@
+{
+    "name": "Loco",
+    "dockerComposeFile": "compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "forwardPorts": [
+        "db:5432"
+    ],
+    "postCreateCommand": "cargo install loco && cargo install sea-orm-cli"
+}
