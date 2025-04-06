@@ -13,6 +13,7 @@ impl MigrationTrait for Migration {
             ("id", ColType::PkAuto),
             
             ("title", ColType::StringNull),
+            ("description", ColType::StringNull),
             ],
             &[
             ]
