@@ -1,10 +1,27 @@
 {
-    "name": "Loco",
-    "dockerComposeFile": "compose.yml",
-    "service": "app",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "forwardPorts": [
-        "db:5432"
-    ],
-    "postCreateCommand": "cargo install loco && cargo install sea-orm-cli"
+  "name": "Loco",
+  "dockerComposeFile": "compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [
+    "db:5432"
+  ],
+  "postCreateCommand": "cargo install loco && cargo install sea-orm-cli",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "ms-azuretools.vscode-docker",
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "adpyke.vscode-sql-formatter",
+        "fill-labs.dependi"
+      ],
+      "settings": {
+        "files.watcherExclude": {
+          "**/target/**": true
+        }
+      }
+    }
+  }
 }

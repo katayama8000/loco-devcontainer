@@ -15,8 +15,14 @@ cp .env.dist .env
 
 run the devcontainer.
 
+start the container and run the following command:
 ```sh
 cargo loco start --binding 0.0.0.0
+```
+
+or watch mode with:
+```sh
+./start.sh
 ```
 
 ```sh
