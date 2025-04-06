@@ -1,0 +1,4 @@
+- カラム追加
+    - `cargo loco g migration AddDescriptionToMovies description:string`
+    - https://loco.rs/docs/the-app/models/
+    - Add{Xxx}To{テーブル名} {カラム名}:{型}

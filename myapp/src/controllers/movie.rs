@@ -16,12 +16,14 @@ use crate::{
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Params {
     pub title: Option<String>,
-    }
+    pub description: Option<String>,
+}
 
 impl Params {
     fn update(&self, item: &mut ActiveModel) {
-      item.title = Set(self.title.clone());
-      }
+        item.title = Set(self.title.clone());
+        item.description = Set(self.description.clone());
+    }
 }
 
 async fn load_item(ctx: &AppContext, id: i32) -> Result<Model> {
